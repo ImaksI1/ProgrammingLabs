@@ -1,0 +1,52 @@
+
+body {
+    font-family: Calibri, sans-serif;
+    color: blue;            
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+}
+
+.container {
+    text-align: center;
+    width: 700px;
+    
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: navy;
+}
+
+.text-block {
+    background-color: rgba(255, 255, 255, 0);
+    overflow: auto;
+    text-align: justify;
+    width: 600px;
+    height: 200px;
+    border: 5px dashed darkblue;
+}
+
+a {
+    color: green;
+}
+
+table {
+    margin-left: auto;   
+    margin-right: 0;
+    border-collapse: collapse;
+}
+
+table td {
+    border: 1px solid darkblue;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: circle;
+    display: inline-block; 
+    text-align: left;     
+    margin-left: 10px;      
+}
