@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" id="form">
+        <input type="text" name="nazwa" placeholder="wpisz nazwę">
+        <input type="email" name="email" placeholder="wpisz address email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        <input type="password" name="password" placeholder="wpisz hasło">
+        <input type="password" name="repassword" placeholder="wpisz hasło">
+        <h3>podaj datę urodzenia</h3>
+        <input type="date" name="birthday">
+        <h3>wybierz płec</h3>
+        <select name="płec" id="">
+            <option value="man">Mężczyzna</option>
+            <option value="woman">Kobieta</option>
+            <option value="other">Nie chcę podawać</option>
+        </select>
+        <label for=""><input type="checkbox" id="accept" name="accept">Akceptuję regulamin</label>
+        <div>
+            <h3>Wybierz wersję</h3>
+            
+            <label for="free"><input type="radio" name="choice" id="free">Wersja darmowa</label>
+            <label for="standart"><input type="radio" name="choice" id="standart">Wersja standartowa</label>
+            <label for="premium"><input type="radio" name="choice" id="premium">Wersja premium</label>
+        </div>
+        <div style="display: flex; gap: 10px;">
+            <button type="submit" id="RegButton">Zarejestruj się</button>
+            <button type="button" id="ClearButton">Wyczyść</button>
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
