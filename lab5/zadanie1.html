@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function funcjaTestowa() {
+            console.log("Witaj JS!");
+        }
+        funcjaTestowa();
+
+        function listEvenNumbers(a, b) {
+            let tablica = [];
+            let step = 1;
+            if (a % 2 == 0) {
+                step = 2;
+            }
+            for (let i = a; i <=b; i += step) {
+                tablica.push(i);
+            }
+            console.log(tablica);
+        }
+        listEvenNumbers(2, 9);
+
+        function fibonacci(n) {
+            if (n <= 0) {
+                console.log([]);
+                return;
+            }
+
+            if (n === 1) {
+                console.log([0]);
+                return;
+            }
+            let tablica = [0, 1];
+            for (let i = tablica.length; i < n; i++) {
+                tablica.push((tablica[i - 1] + tablica[i - 2]));
+            }
+            console.log(tablica);
+        }
+        fibonacci(9);
+
+        function silnia(n) {
+            if (n <= 1) {
+                return 1
+            }
+            let res = n * silnia(n - 1);
+            return res;
+        }
+        console.log(silnia(5));
+
+        function obliczenieWzoru(n) {
+            let a = 3;
+            let result = 1;
+            for (let i = 0; i < n; i++) {
+                console.log(`1/${a}`);
+                if (i % 2 == 0) {
+                    result -= 1 / a;
+                } else {
+                    result += 1 / a;
+                }
+                a += 2; 
+            }
+            result *= 4;
+            console.log(result);
+        }
+        obliczenieWzoru(5)
+
+        function choinka(n) {
+            let a = 1;
+            for (let i = 0; i < n; i++) {
+                console.log(" ".repeat(n - i), "*".repeat(a));
+                a += 2;
+            }
+        }
+        choinka(7);
+
+        function dziesietnaDoSzesnastkowej(n) {
+            if (n === 0) {
+                console.log("0");
+                return;
+            }
+            let tablica = [];
+            let a = 0;
+            while (n > 0) {
+                a = n % 16;
+                switch (a) {
+                    case 10:
+                        a = "A";
+                        break;
+                    case 11:
+                        a = "B";
+                        break;
+                    case 12:
+                        a = "C";
+                        break;
+                    case 13: 
+                        a = "D";
+                        break;
+                    case 14:
+                        a = "E";
+                        break;
+                    case 15:
+                        a = "F";
+                        break;
+                }
+                tablica.push(a);
+                n = Math.floor(n / 16);
+            }
+            tablica.reverse();
+            console.log(tablica.join(""))
+            
+        }
+        dziesietnaDoSzesnastkowej(128);
+    </script>
+</body>
+</html>
